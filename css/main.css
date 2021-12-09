@@ -1,0 +1,383 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+						/* >>>>--- COMMON CSS START---<<<< */
+html,body{margin: 0; padding: 0; width: 100%; height: 100%;
+	overflow-y: hidden; overflow-x: hidden;}/*보이는 화면기준-중요!!!*/
+a{text-decoration: none; color: #ccc;}
+ul,ol{margin: 0;padding: 0;list-style: none;}
+ul::after,ol::after{/*float해제*/content: ""; display: block; clear: both;}
+li{float: left;}
+img{border: none;/*링크테두리없앰*/}
+h1,h2,h3,h4,h5,h6{margin: 0;padding: 0;font-size: 16px;}
+						/* >>>>---- COMMON CSS END---<<<<*/
+
+
+
+						/* >>>>--- 페이지 개별 디자인 START ---<<<< */
+.page{position: relative;/*부모자격*/width: 100%;height: 100%;}
+#page1{background: #fff top/cover/*url(../images/cover/6.png) no-repeat top/cover*/;}
+#page2{background: #fff top/cover;}
+#page3{background: #fff top/cover;}
+#page4{background: #fff top/cover;}
+#page5{background: #fff top/cover;}
+						/* >>>>--- 페이지 개별 디자인 END ---<<<< */
+
+
+
+						/*>>>> --- 탑 영역 START --- <<<<*/
+#top{position: fixed; width: 100%; height: 80px; z-index: 99999999;/*가장위*/}
+#top::before{content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%;opacity: 0.7;/*background-color: #000;*/}
+#top>div{/*속박스-사이트 품위유지!*/position: relative;max-width: 1400px; width: 100%; height: 100%; margin: 0 auto; /*outline: 1px solid lime;*/}
+#logo{position: absolute;display: block;width: 200px;height: 100%;text-align: center;overflow: hidden;}
+#logo>li{position: relative;top: 33%;width: 100%;font-size: 20px;color: #ccc;text-decoration: none;}
+						/*>>>> --- 탑 영역 END --- <<<<*/
+
+
+
+						/*>>>> --- GNB 네비게이션 START --- <<<<*/
+#gnb{position: absolute; top: 40px; right: 2%;}
+#gnb li{margin: 0 7px;}
+	/*메뉴에 마우스 오버시*/
+#gnb a:hover{color: #556A90;text-decoration: overline;}
+#gnb li:hover{transform: scale(1.1);}
+	/*선택된 메뉴(li)에 class주기*/
+.selM a{color: #2F4E86;text-decoration: overline;}
+.selM{transform: scale(1.1);}
+						/* >>>>--- GNB 네비게이션 END ---<<<< */
+
+
+
+						/* >>>>--- 블릿 네비게이션 START ---<<<< */
+ol#bnavi{position: fixed;width: 15px;right: 5%;top: 50%;transform: translateY(-50%);/*세로중앙이동*/}
+#bnavi>li{position: relative;/*부모자격*/width: 100%;height: 15px;box-sizing: border-box;/*크기유지*/border: 2px solid #ccc;border-radius: 50%;margin: 3px 0;}
+#bnavi>li>a{display: block;width: 100%;height: 100%;}/*글자숨김*/
+#bnavi span{display: none;}/*선택된 블릿 class*/
+.selB{background-color: #556A90;}
+						/* >>>>--- 블릿 네비게이션 END ---<<<< */
+
+
+
+
+						/* >>>>--- 1 page START ---<<<< */
+#cover1{position: absolute; top: 10%;height: 800px;left: 250px;}
+#cover2{position: absolute;top: 30%;height: 605px;left: 930px;}
+#cover3{font-family: 'Raleway', Arial, sans-serif;}
+.txt1{color:#ccc;position: absolute;top:10%;left: 51%;font-size: 70px;}
+.txt2{color:#ccc;position: absolute;top:18%;left: 52%;font-size: 70px;}
+.txt3{color:#ccc;position: absolute;top:26%;left: 53%;font-size: 70px;}
+#page1>img{height: 100%;width: 100%;}
+						/* >>>>--- 1 page END ---<<<< */
+
+
+
+						/* >>>>--- 2 page START ---<<<< */
+.page2txt{
+	position: absolute;
+	font-size: 55px;
+	top: 35%;
+	left: 60px;
+	color: #556A90;
+	transform: rotate(-90deg);}
+
+#ptxt{text-align: left;position: absolute; top: 160px; right: 270px;width: 400px; height: 650px;}
+#ptxt li{font-size: 18px; width: 100%; height: 30px;}
+#ptxt a {-webkit-transition: color 0.3s;-moz-transition: color 0.3s;transition: color 0.3s;}
+#ptxt a:hover{text-decoration: underline;}#ptxt a::before {position: absolute;color: transparent;content: '•';text-shadow: 0 0 transparent;font-size: 2.2em;-webkit-transition: text-shadow 0.3s, color 0.3s;-moz-transition: text-shadow 0.3s, color 0.3s;transition: text-shadow 0.3s, color 0.3s;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);transform: translateX(-50%);pointer-events: none;}
+#ptxt a:hover,#ptxt a:focus {color: #556A90;}
+						/* >>>>--- 2 page END ---<<<< */
+
+
+
+
+						/* >>>>--- 3 page START ---<<<< */
+.page3txt{
+	position: absolute;
+	font-size: 55px;
+	top: 40%;
+	left: 60px;
+	color: #556A90;
+	transform: rotate(-90deg);
+}
+
+figure.Dbox {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  left: 210px;
+  margin: 12% 10px 0 10px;
+  min-width: 255px;
+  max-width: 355px;
+  max-height: 500px;
+  width: 100%;	
+  background: #000;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+}
+figure.Dbox * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease-in-out;
+  transition: all 0.45s ease-in-out;
+}
+
+/*컨텐츠이미지*/
+figure.Dbox img {
+  max-width: 100%;
+  position: relative;
+  opacity: 0.9;
+}
+
+/*컨텐츠설명박스*/
+figure.Dbox figcaption {
+  position: absolute;
+  top: 85%;
+  left: 7%;
+  right: 7%;
+  bottom: 10%;
+  border: 1px solid #fff; /*위쪽선*/
+  border-width: 1px 1px 0;
+}
+figure.Dbox .heading {
+  overflow: hidden;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+figure.Dbox h2 {
+  display: table;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  width: auto;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+figure.Dbox h2 span {
+  font-weight: 800;
+}
+figure.Dbox h2:before,
+figure.Dbox h2:after {
+  position: absolute;
+  display: block;
+  width: 1000%;
+  height: 1px;
+  content: '';
+  background: #fff;/*텍스트 줄*/
+  top: 50%;
+}
+figure.Dbox h2:before {
+  left: -1000%;
+}
+figure.Dbox h2:after {
+  right: -1000%;
+}
+figure.Dbox p {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0;
+  opacity: 0;
+  line-height: 1.6em;
+  font-size: 0.9em;
+}
+figure.Dbox a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+figure.Dbox:hover img,
+figure.Dbox.hover img {
+  opacity: 0.25;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+figure.Dbox:hover figcaption,
+figure.Dbox.hover figcaption {
+  top: 30%;
+  bottom: 30%;
+}
+figure.Dbox:hover p,
+figure.Dbox.hover p {
+  opacity: 1;
+  -webkit-transition-delay: 0.35s;
+  transition-delay: 0.35s;
+}
+					/* >>>>--- 3 page END ---<<<< */
+
+
+					/* >>>>--- 4 page START ---<<<< */
+.page4txt{
+	position: absolute;
+	font-size: 55px;
+	top: 40%;
+	left: 90px;
+	color: #556A90;
+	transform: rotate(-90deg);
+}
+
+figure.Cbox {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  left: 210px;
+  margin: 12% 10px 0 10px;
+  min-width: 255px;
+  max-width: 355px;
+  max-height: 500px;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+}
+figure.Cbox * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease-in-out;
+  transition: all 0.45s ease-in-out;
+}
+
+/*컨텐츠이미지*/
+figure.Cbox img {
+  max-width: 100%;
+  position: relative;
+  opacity: 0.9;
+}
+
+/*컨텐츠설명박스*/
+figure.Cbox figcaption {
+  position: absolute;
+  top: 85%;
+  left: 7%;
+  right: 7%;
+  bottom: 10%;
+  border: 1px solid #fff;/*텍스트줄*/
+  border-width: 1px 1px 0;
+}
+figure.Cbox .heading {
+  overflow: hidden;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+figure.Cbox h2 {
+  display: table;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  width: auto;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+figure.Cbox h2 span {
+  font-weight: 800;
+}
+figure.Cbox h2:before,
+figure.Cbox h2:after {
+  position: absolute;
+  display: block;
+  width: 1000%;
+  height: 1px;
+  content: '';
+  background: #fff;/*텍스트 줄*/
+  top: 50%;
+}
+figure.Cbox h2:before {
+  left: -1000%;
+}
+figure.Cbox h2:after {
+  right: -1000%;
+}
+figure.Cbox p {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0;
+  opacity: 0;
+  line-height: 1.6em;
+  font-size: 0.9em;
+}
+figure.Cbox a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+figure.Cbox:hover img,
+figure.Cbox.hover img {
+  opacity: 0.25;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+figure.Cbox:hover figcaption,
+figure.Cbox.hover figcaption {
+  top: 30%;
+  bottom: 30%;
+}
+figure.Cbox:hover p,
+figure.Cbox.hover p {
+  opacity: 1;
+  -webkit-transition-delay: 0.35s;
+  transition-delay: 0.35s;
+}
+					/* >>>>--- 4 page END ---<<<< */
+
+
+
+					/*>>>>--- 5 page START ---<<<<*/
+.page5txt{
+	position: absolute;
+	font-size: 55px;
+	top: 40%;
+	left: 20px;
+	color: #556A90;
+	transform: rotate(-90deg);}
+
+					/*>>>>--- 5 page END ---<<<<*/
+
+
+	
+/* sns 하위메뉴 */
+    .menu a{cursor:pointer;}
+.hide{
+	position: absolute;
+}
+    .menu .hide{display:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
